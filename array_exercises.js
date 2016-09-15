@@ -1,4 +1,4 @@
-Array.prototype.my_uniq = function() {
+Array.prototype.myUniq = function() {
   const result = [];
 
   for (let i = 0; i < this.length; i++) {
@@ -17,7 +17,7 @@ Array.prototype.my_uniq = function() {
 };
 
 
-Array.prototype.two_sum = function() {
+Array.prototype.twoSum = function() {
   const result = [];
 
   for (let i = 0; i < (this.length -1); i++) {
@@ -32,7 +32,7 @@ Array.prototype.two_sum = function() {
 };
 
 
-Array.prototype.my_transpose = function() {
+Array.prototype.myTranspose = function() {
   const result = [];
   for (let i = 0; i < this.length; i++) {
     result.push([]);
