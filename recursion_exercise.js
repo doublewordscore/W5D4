@@ -141,7 +141,6 @@ Array.prototype.merge = function(other_array) {
 };
 
 Array.prototype.mergeSort = function() {
-  debugger
   if (this.length === 1) {
     return this;
   }
@@ -151,4 +150,19 @@ Array.prototype.mergeSort = function() {
   return left.mergeSort().merge(right.mergeSort());
 };
 
-console.log([5,2,9,1,10,8].mergeSort());
+// console.log([5,2,9,1,10,8].mergeSort());
+
+Array.prototype.subsets = function() {
+  if (this.length === 0) {
+    return [this];
+  } else {
+    // debugger
+    const prevSubsets = this.slice(0, (this.length - 1)).subsets();
+    const newSubsets = prevSubsets.map((subset) => {
+      return subset.concat([this[this.length - 1]]);
+    });
+    return prevSubsets.concat(newSubsets);
+
+  }
+};
+console.log([1, 2, 3].subsets());
